@@ -72,6 +72,7 @@ public class MetodoPincipal {
         String apellido;
         String correo;
         String entradaTexto;
+        try{
         System.out.println ("ingrese 'p' para un reporte positivo o 'n' para negativo");
         Scanner entradaEscaner = new Scanner (System.in);
         entradaTexto=entradaEscaner.nextLine ();
@@ -82,6 +83,7 @@ public class MetodoPincipal {
                 re.setTipo("negativo");
             }else{
                 System.out.println("opcion erronea");
+                //return null;
             }
         } 
         System.out.println ("ingrese la descripcion del reporte");
@@ -110,6 +112,9 @@ public class MetodoPincipal {
         entradaTexto=entradaEscaner.nextLine ();
         nit= Integer.parseInt(entradaTexto);
         re.setEmpresa(new Empresa(nombre,cedula,nit));
+        }catch(Exception e){
+            System.out.println("ingreso erroneo");
+        }
         return re;
     }
     public HashMap<Integer, Reporte> comvertir() throws IOException{
@@ -125,8 +130,12 @@ public class MetodoPincipal {
         int j=0;
         Integer a=0;
         for (i = 0; i < reportes.length; i++){
+            try{
             cadena2=reportes[i].split(",");
             map.put(i+1,new Reporte(i+1,cadena2[4],cadena2[5],new Persona((Integer.parseInt(cadena2[2])),cadena2[0],cadena2[1],cadena2[3]),new Empresa(cadena2[6],(Integer.parseInt(cadena2[7])),(Integer.parseInt(cadena2[8])))));
+            }catch(Exception e){
+                System.out.println("no existen reportes");
+            }
         }
         return map;
     }
