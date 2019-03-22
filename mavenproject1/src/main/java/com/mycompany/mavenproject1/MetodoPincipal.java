@@ -29,7 +29,7 @@ public class MetodoPincipal {
         String cadena,resultado="";
         FileReader f;
         File archivo ;
-        archivo=new File("C:\\Users\\daniel\\Documents\\dataCredito.txt");
+        archivo=new File("datacredito.txt");
         f= new FileReader(archivo);
         BufferedReader b= new BufferedReader(f);
         while((cadena=b.readLine())!=null){
@@ -53,7 +53,7 @@ public class MetodoPincipal {
             cadena=cadena+re.getPersona().getNombre()+","+re.getPersona().getApellido()+","+re.getPersona().getCedula()+","+re.getPersona().getCorreo()+","+re.getTipo()+","+re.getDescripcion()+","+re.getEmpresa().getNombre()+","+re.getEmpresa().getNit()+","+re.getEmpresa().getRut()+"-";
             FileWriter f;
             File archivo ;
-            archivo=new File("C:\\Users\\daniel\\Documents\\dataCredito.txt");
+            archivo=new File("datacredito.txt");
             f= new FileWriter(archivo);
             BufferedWriter b= new BufferedWriter(f);
             b.write(cadena);
@@ -168,7 +168,7 @@ public class MetodoPincipal {
             }  
             FileWriter f;
             File archivo ;
-            archivo=new File("C:\\Users\\daniel\\Documents\\dataCredito.txt");
+            archivo=new File("datacredito.txt");
             f= new FileWriter(archivo);
             BufferedWriter b= new BufferedWriter(f);
             b.write(cadena);
