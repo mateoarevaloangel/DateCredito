@@ -8,12 +8,30 @@ package com.mycompany.mavenproject1;
 /**
  *
  * @author daniel
+ * @author MateoG
+ * @version 1.0
  */
 public class Empresa {
+    /**
+     * Variable para nombre
+     */   
     String nombre;
+    /**
+     * Variable para nit
+     */ 
     int nit;
+    /**
+     * Variable para rut
+     */ 
     int rut;
-
+    
+    /**
+     * Constructor con nombre nit y rut
+     * @param nombre guarda nombre
+     * @param nit guarda nit
+     * @param rut guarda rut
+     */   
+    
     public Empresa(String nombre, int nit, int rut) {
         this.nombre = nombre;
         this.nit = nit;

@@ -8,14 +8,38 @@ package com.mycompany.mavenproject1;
 /**
  *
  * @author daniel
+ * @author MateoG
+ * @version 1.0
  */
 public class Reporte {
+    /**
+     * variable id
+     */
     int id;
+    /**
+     * variable tipo
+     */
     String tipo;
+    /**
+     * variable desc
+     */
     String descripcion;
+    /**
+     * variable persona
+     */
     Persona persona;  
+    /**
+     * variable epmpresa
+     */
     Empresa empresa;
-
+    /**
+     * constructor reporte
+     * @param  id id
+     * @param tipo tipo
+     * @param descripcion desc
+     * @param persona persona
+     * @param empresa empresa
+     */
     public Reporte(int id, String tipo, String descripcion, Persona persona, Empresa empresa) {
         this.id = id;
         this.tipo = tipo;

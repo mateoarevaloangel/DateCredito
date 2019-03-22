@@ -10,6 +10,8 @@ import java.io.IOException;
 /**
  *
  * @author daniel
+ * @author MateoG
+ * @version 1.0
  */
 public class Main {
     //static Reporte re= new Reporte();

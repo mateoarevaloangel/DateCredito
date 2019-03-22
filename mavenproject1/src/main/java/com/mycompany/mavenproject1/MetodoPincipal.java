@@ -8,6 +8,8 @@ package com.mycompany.mavenproject1;
 /**
  *
  * @author daniel
+ * @author MateoG
+ * @version 1.0
  */
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,11 +21,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
-/**
- *
- * @author daniel
- */
 public class MetodoPincipal {
+    /**
+     * Método para leer archivo
+     * @return devuelve la lectura
+     */ 
     public String leerArchivo() throws FileNotFoundException, IOException{
         try{
         String cadena,resultado="";
@@ -45,6 +47,10 @@ public class MetodoPincipal {
             return "";
         }
     }
+    /**
+     * Método para escribir archivo
+     * @param re recibe reporte
+     */
     public void escrbir(Reporte re) throws IOException{
         try{
             String cadena ="";
@@ -64,6 +70,10 @@ public class MetodoPincipal {
             System.out.println("errror en algo mas");
         }
     }
+    /**
+     * Método para crear reporte
+     * @return devuelve el reporte
+     */
     public Reporte crearReporte(){
         Reporte re= new Reporte(1,"adas","sadas",null,null);
         int cedula;
@@ -117,6 +127,10 @@ public class MetodoPincipal {
         }
         return re;
     }
+    /**
+     * Método para convertir hashmap en reporte
+     * @return devuelve hashmap
+     */
     public HashMap<Integer, Reporte> comvertir() throws IOException{
         String cadena;
         String cadena1;
@@ -139,6 +153,9 @@ public class MetodoPincipal {
         }
         return map;
     }
+    /**
+     * Método menu de opciones
+     * */
     public void menu() throws IOException{
         String entradaTexto;
         HashMap<Integer, Reporte> map = new HashMap<Integer, Reporte>();
@@ -163,11 +180,19 @@ public class MetodoPincipal {
             }
         }
     }
+    /**
+     * Método para mostrar reporte
+     * @param map recibe map con reporte
+     */
     public void mostrar(HashMap<Integer, Reporte> map){
         for(Reporte re:map.values()){
             re.mostrar();
         }
     }
+    /**
+     * Método para escribir map
+     * @param map recibe map con reporte
+     */
     public void escrbirMap(HashMap<Integer, Reporte> map) throws IOException{
         try{
             String cadena ="";
@@ -188,6 +213,11 @@ public class MetodoPincipal {
             System.out.println("errror en algo mas");
         }
     }
+    /**
+     * Método para borrar reporte
+     * @param map reporte
+     * @return devuelve map con reporte borrado
+     */
     public HashMap<Integer, Reporte> borrarReporte(HashMap<Integer, Reporte> map){
         String entradaTexto;
         int clave=0;
